@@ -10,18 +10,50 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <!-- Zone des produits -->
-        <div class="col-9" id="produits">
-            <!-- Dynamiquement rempli via script.js -->
+        <div class="col-md-12">
+            <a href="ajouter.php" class="btn btn-primary">Ajouter une vente</a>
         </div>
-        <!-- Zone de la commande -->
-        <div class="col-3" id="commande">
-            <h4>Commande</h4>
-            <div id="liste-commande"></div>
-            <h5>Total : <span id="total">0</span> €</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Client</th>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Prix</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    require 'config.php';
+                    $db = new PDO($dsn, $username, $password);
+                    $statement = $db->query('SELECT ventes.id, clients.nom AS client, produits.nom AS produit, ventes.quantite, ventes.prix, ventes.date FROM ventes LEFT JOIN clients ON ventes.client_id = clients.id LEFT JOIN produits ON ventes.produit_id = produits.id ORDER BY ventes.id DESC');
+                    while($vente = $statement->fetch()) {
+                        echo '<tr>';
+                        echo '<td>' . htmlspecialchars($vente['id']) . '</td>';
+                        echo '<td>' . htmlspecialchars($vente['client']) . '</td>';
+                        echo '<td>' . htmlspecialchars($vente['produit']) . '</td>';
+                        echo '<td>' . htmlspecialchars($vente['quantite']) . '</td>';
+                        echo '<td>' . htmlspecialchars($vente['prix']) . '</td>';
+                        echo '<td>' . htmlspecialchars($vente['date']) . '</td>';
+                        echo '<td>';
+                        echo '<a href="voir.php?id=' . htmlspecialchars($vente['id']) . '" class="btn btn-primary">Voir</a> ';
+                        echo '<a href="modifier.php?id=' . htmlspecialchars($vente['id']) . '" class="btn btn-warning">Modifier</a> ';
+                        echo '<a href="supprimer.php?id=' . htmlspecialchars($vente['id']) . '" class="btn btn-danger">Supprimer</a>';
+                        echo '</td>';
+                        echo '</tr>';
+                    }
+                Database::disconnect();
+                ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
-<script src="script.js"></script>
 </body>
 </html>

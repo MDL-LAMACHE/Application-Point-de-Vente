@@ -10,6 +10,11 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$USER_HOME$/Documents/php-8.4.1-Win32-vs17-x64" />
+    </include_path>
+  </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
