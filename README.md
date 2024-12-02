@@ -21,18 +21,18 @@ Cette application est un système de point de vente (POS) en cours de développe
 
 ### Pour installer et démarrer l'application :
 1. Clonez ce repository :
-   `git clone https://github.com/MDL-LAMACHE/Shop-Application-Gestion.git`
+   ```git clone https://github.com/MDL-LAMACHE/Shop-Application-Gestion.git```
 2. Accédez au répertoire du projet :
-   `cd Shop-Application-Gestion`
+   ```cd Shop-Application-Gestion```
 3. Installez les dépendances :
-   `npm install`  
+   ```npm install```
    ou si vous utilisez Yarn :  
-   `yarn install`
+   ```yarn install```
 4. Configurez votre base de données (consultez le fichier `config.json` pour les variables d'environnement nécessaires).
 5. Lancez l'application :
-   `npm start`  
+   ```npm start```
    ou avec Yarn :  
-   `yarn start`
+   ```yarn start```
 
 ## Contributeurs
 
@@ -41,9 +41,11 @@ Ce projet est actuellement en développement.
 [![Contributeurs](https://contrib.rocks/image?repo=MDL-LAMACHE/Shop-Application-Gestion)](https://github.com/MDL-LAMACHE/Shop-Application-Gestion/graphs/contributors)
 ## Roadmap
 
-- [ ] Intégration des paiements
+- [ ] Interface utilisateur de base
 - [ ] Interface utilisateur finale
-- [ ] Tests et débogage
+- [ ] Interfaces d'ajouts des produits
+- [ ] Interfaces de recette (journée/semaine/mois)
+- [ ] Mise en place d'une api
 - [ ] Déploiement en production
 
 ## License
