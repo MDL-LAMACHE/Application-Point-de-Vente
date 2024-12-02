@@ -21,9 +21,9 @@ Cette application est un système de point de vente (POS) en cours de développe
 
 ### Pour installer et démarrer l'application :
 1. Clonez ce repository :
-   <pre><code>git clone https://github.com/MDL-LAMACHE/Shop-Application-Gestion.git</code></pre>
+   <pre><code>git clone https://github.com/MDL-LAMACHE/Application-Point-de-Vente.git</code></pre>
 2. Accédez au répertoire du projet :
-   <pre><code>cd Shop-Application-Gestion</code></pre>
+   <pre><code>cd Application-Point-de-Vente</code></pre>
 3. Installez les dépendances :
    <pre><code>npm install</code></pre>
    ou si vous utilisez Yarn :  
@@ -38,7 +38,7 @@ Cette application est un système de point de vente (POS) en cours de développe
 
 Ce projet est actuellement en développement.
 
-[![Contributeurs](https://contrib.rocks/image?repo=MDL-LAMACHE/Shop-Application-Gestion)](https://github.com/MDL-LAMACHE/Shop-Application-Gestion/graphs/contributors)
+[![Contributeurs](https://contrib.rocks/image?repo=MDL-LAMACHE/Application-Point-de-Vente)](https://github.com/MDL-LAMACHE/Application-Point-de-Vente/graphs/contributors)
 ## Roadmap
 
 - [ ] Interface utilisateur de base
