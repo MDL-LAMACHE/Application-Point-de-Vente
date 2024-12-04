@@ -1,0 +1,232 @@
+
+
+:root {
+    --main-bg: #f3f4f6;
+    --panel-bg: #ffffff;
+    --accent: #007bff;
+    --accent-hover: #0056b3;
+    --danger: #dc3545;
+    --success: #28a745;
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --border-color: #ddd;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-panel {
+    width: 60%;
+    background-color: var(--panel-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.left-panel h2 {
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+}
+
+.article-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--main-bg);
+}
+
+.article-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: var(--panel-bg);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.article-item button {
+    background-color: var(--danger);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.article-item button:hover {
+    background-color: #a71d2a;
+}
+
+.total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.right-panel {
+    width: 40%;
+    background-color: var(--panel-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.button {
+    padding: 15px;
+    font-size: 1rem;
+    background-color: var(--accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px var(--shadow);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+}
+
+.add-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--success);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px var(--shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+    background-color: #218838;
+}
+
+.bottom-buttons {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--panel-bg);
+}
+
+.bottom-button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.bottom-button.menu {
+    background-color: #ffc107;
+}
+
+.bottom-button.success {
+    background-color: var(--success);
+    color: #ffffff;
+}
+
+.bottom-button.danger {
+    background-color: var(--danger);
+    color: #ffffff;
+}
+
+.bottom-button:hover {
+    opacity: 0.8;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: var(--panel-bg);
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 10px;
+    z-index: 20;
+}
+
+#modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+#modal button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--success);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modal button:hover {
+    background-color: #218838;
+}
