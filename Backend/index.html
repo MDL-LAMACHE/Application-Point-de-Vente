@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> c'est tres bancal </title>
+  <title>c'est tres bancal</title>
   <style>
 
     :root {
-      --main-bg: #facece;
+      --main-bg: #f3f4f6;
       --panel-bg: #ffffff;
-      --accent: #000000;
-      --accent-hover: #eceff3;
+      --accent: #007bff;
+      --accent-hover: #0056b3;
       --danger: #dc3545;
       --success: #28a745;
-      --text-primary: #bc2727;
+      --text-primary: #333333;
       --text-secondary: #555555;
-      --border-color: #d53d65;
+      --border-color: #ddd;
       --shadow: rgba(0, 0, 0, 0.1);
     }
 
@@ -37,6 +37,7 @@
       border-radius: 10px;
       overflow: hidden;
     }
+
     .left-panel {
       width: 60%;
       background-color: var(--panel-bg);
@@ -74,8 +75,8 @@
 
     .article-item button {
       background-color: var(--danger);
-      color: #b10e0e;
-      border: solid;
+      color: #fff;
+      border: none;
       padding: 5px 10px;
       border-radius: 5px;
       cursor: pointer;
@@ -114,8 +115,8 @@
       padding: 15px;
       font-size: 1rem;
       background-color: var(--accent);
-      color: #a82626;
-      border: solid;
+      color: #ffffff;
+      border: none;
       border-radius: 8px;
       text-align: center;
       transition: background-color 0.3s ease;
@@ -132,8 +133,8 @@
       top: 20px;
       right: 20px;
       background-color: var(--success);
-      color: #d12323;
-      border: solid;
+      color: #ffffff;
+      border: none;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -166,7 +167,7 @@
       padding: 15px;
       font-size: 1.2rem;
       text-align: center;
-      border: solid;
+      border: none;
       cursor: pointer;
       transition: opacity 0.3s ease;
     }
@@ -177,19 +178,18 @@
 
     .bottom-button.success {
       background-color: var(--success);
-      color: #d32f2f;
+      color: #ffffff;
     }
 
     .bottom-button.danger {
       background-color: var(--danger);
-      color: #cf1919;
+      color: #ffffff;
     }
 
     .bottom-button:hover {
       opacity: 0.8;
     }
 
-    /* Modale */
     #overlay {
       display: none;
       position: fixed;
@@ -227,8 +227,8 @@
       width: 100%;
       padding: 10px;
       background-color: var(--success);
-      color: #ca1515;
-      border: solid;
+      color: #ffffff;
+      border: none;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -244,82 +244,93 @@
   <h3>Ajouter un article</h3>
   <input type="text" id="article-name" placeholder="Nom de l'article">
   <input type="number" id="article-price" placeholder="Prix de l'article">
-  <div style="display: flex; justify-content: space-between;">
-    <button onclick="closeModal()">Retour</button>
-    <button onclick="saveArticle()">Enregistrer</button>
-  </div>
+  <button onclick="saveArticle()">Enregistrer</button>
+  <button onclick="closeModal()" style="background-color: var(--danger);">Retour</button>
+
 </div>
 
 <div class="container">
   <div class="left-panel">
     <h2>Articles Sélectionnés</h2>
     <div class="article-list" id="article-list"></div>
-    <div class="total" id="total">Total : 0? </div>
+    <div class="total" id="total">Total : 0€</div>
   </div>
+
   <div class="right-panel">
     <div class="buttons" id="buttons-container"></div>
   </div>
+
   <button class="add-button" onclick="openModal()">+</button>
 </div>
+
 <div class="bottom-buttons">
   <button class="bottom-button menu" onclick="showMenu()">Menu</button>
   <button class="bottom-button success" onclick="confirmOrder()">Entrer</button>
-  <button class="bottom-button danger" onclick="clearOrder()">Supprimer</button>
+  <button class="bottom-button danger" onclick="clearOrder()" >Supprimer</button>
 </div>
+
 <script>
   let articles = [{ name: "Article 1", price: 10 }];
   let total = 0;
+
   function init() {
     updateButtons();
   }
+
   function updateButtons() {
     const container = document.getElementById("buttons-container");
     container.innerHTML = "";
     articles.forEach((article, index) => {
       const btn = document.createElement("button");
-      btn.textContent = `${article.name} (${article.price}?)`;
+      btn.textContent = `${article.name} (${article.price}€)`;
       btn.className = "button";
       btn.onclick = () => addToCart(article);
       container.appendChild(btn);
     });
   }
+
   function addToCart(article) {
     total += article.price;
-    document.getElementById("total").textContent = `Total : ${total}?`;
+    document.getElementById("total").textContent = `Total : ${total}€`;
     const list = document.getElementById("article-list");
     const item = document.createElement("div");
     item.className = "article-item";
-    item.innerHTML = `
-                ${article.name} - ${article.price}?
-                <button onclick="removeArticle(this, ${article.price})">?</button>
-            `;
+    item.innerHTML = `${article.name} - ${article.price}€\n
+<button onclick="removeArticle(this, ${article.price})">❌</button>\n            `;
     list.appendChild(item);
   }
+
   function removeArticle(button, price) {
     const articleItem = button.parentElement;
     articleItem.remove();
     total -= price;
-    document.getElementById("total").textContent = `Total : ${total}?`;
+    document.getElementById("total").textContent = `Total : ${total}€`;
   }
+
   function clearOrder() {
     total = 0;
-    document.getElementById("total").textContent = "Total : 0?";
+    document.getElementById("total").textContent = "Total : 0€";
     document.getElementById("article-list").innerHTML = "";
   }
+
   function confirmOrder() {
     alert("Commande confirmée !");
   }
+
   function showMenu() {
     alert("Menu non configuré !");
   }
+
   function openModal() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("modal").style.display = "block";
   }
+
   function closeModal() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("modal").style.display = "none";
   }
+
   function saveArticle() {
     const name = document.getElementById("article-name").value;
     const price = parseFloat(document.getElementById("article-price").value);
@@ -331,8 +342,8 @@
       alert("Veuillez remplir correctement les informations.");
     }
   }
+
   init();
 </script>
 </body>
 </html>
-
