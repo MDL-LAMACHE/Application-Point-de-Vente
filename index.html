@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c'est très bancal</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<div id="overlay"></div>
+<div id="modal">
+    <h3>Ajouter un article</h3>
+    <input type="text" id="article-name" placeholder="Nom de l'article">
+    <input type="number" id="article-price" placeholder="Prix de l'article">
+    <button onclick="saveArticle()">Enregistrer</button>
+    <button onclick="closeModal()" style="background-color: var(--danger);">Retour</button>
+
+</div>
+
+<div class="container">
+    <div class="left-panel">
+        <h2>Articles Sélectionnés</h2>
+        <div class="article-list" id="article-list"></div>
+        <div class="total" id="total">Total : 0€</div>
+    </div>
+
+    <div class="right-panel">
+        <div class="buttons" id="buttons-container"></div>
+    </div>
+
+    <button class="add-button" onclick="openModal()">+</button>
+</div>
+
+<div class="bottom-buttons">
+    <button class="bottom-button menu" onclick="showMenu()">Menu</button>
+    <button class="bottom-button success" onclick="confirmOrder()">Entrer</button>
+    <button class="bottom-button danger" onclick="clearOrder()" >Supprimer</button>
+</div>
+
+<script src="/js/index.js"></script>
+</body>
+</html>
