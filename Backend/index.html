@@ -6,16 +6,14 @@
   <title> c'est tres bancal </title>
   <style>
 
-    <!-- Ceci est un commentaire -->
-
     :root {
-      --main-bg: #ff3333;
-      --panel-bg: #f81803;
-      --accent: #0d05ed;
-      --accent-hover: #0056b3;
+      --main-bg: #facece;
+      --panel-bg: #ffffff;
+      --accent: #000000;
+      --accent-hover: #eceff3;
       --danger: #dc3545;
       --success: #28a745;
-      --text-primary: #333333;
+      --text-primary: #bc2727;
       --text-secondary: #555555;
       --border-color: #d53d65;
       --shadow: rgba(0, 0, 0, 0.1);
@@ -76,8 +74,8 @@
 
     .article-item button {
       background-color: var(--danger);
-      color: #fff;
-      border: none;
+      color: #b10e0e;
+      border: solid;
       padding: 5px 10px;
       border-radius: 5px;
       cursor: pointer;
@@ -116,8 +114,8 @@
       padding: 15px;
       font-size: 1rem;
       background-color: var(--accent);
-      color: #ffffff;
-      border: none;
+      color: #a82626;
+      border: solid;
       border-radius: 8px;
       text-align: center;
       transition: background-color 0.3s ease;
@@ -134,8 +132,8 @@
       top: 20px;
       right: 20px;
       background-color: var(--success);
-      color: #ffffff;
-      border: none;
+      color: #d12323;
+      border: solid;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -168,7 +166,7 @@
       padding: 15px;
       font-size: 1.2rem;
       text-align: center;
-      border: none;
+      border: solid;
       cursor: pointer;
       transition: opacity 0.3s ease;
     }
@@ -179,12 +177,12 @@
 
     .bottom-button.success {
       background-color: var(--success);
-      color: #ffffff;
+      color: #d32f2f;
     }
 
     .bottom-button.danger {
       background-color: var(--danger);
-      color: #ffffff;
+      color: #cf1919;
     }
 
     .bottom-button:hover {
@@ -229,8 +227,8 @@
       width: 100%;
       padding: 10px;
       background-color: var(--success);
-      color: #ffffff;
-      border: none;
+      color: #ca1515;
+      border: solid;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -254,7 +252,7 @@
 
 <div class="container">
   <div class="left-panel">
-    <h2>Articles S?lectionn?s</h2>
+    <h2>Articles Sélectionnés</h2>
     <div class="article-list" id="article-list"></div>
     <div class="total" id="total">Total : 0? </div>
   </div>
@@ -309,10 +307,10 @@
     document.getElementById("article-list").innerHTML = "";
   }
   function confirmOrder() {
-    alert("Commande confirm?e !");
+    alert("Commande confirmée !");
   }
   function showMenu() {
-    alert("Menu non configur? !");
+    alert("Menu non configuré !");
   }
   function openModal() {
     document.getElementById("overlay").style.display = "block";
@@ -337,4 +335,4 @@
 </script>
 </body>
 </html>
-<img "C:\Users\test\Pictures\Sans titre.png" />
+
