@@ -70,11 +70,11 @@ body {
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
-}
-
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+
 
 .article-item button:hover {
     background-color: #a71d2a;
@@ -95,7 +95,7 @@ body {
     right: 0;
     height: 100%;
     width: 15px;
-    background: var(--panel-bg)
+    background: var(--panel-bg);
      padding: 6px 14px;
 }
 
