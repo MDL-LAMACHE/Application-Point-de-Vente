@@ -1,49 +1,82 @@
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f9fc;
+    background-color: #f0f0f0;
 }
-
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
-
 .settings-button {
     display: flex;
-    align-items: normal;
-    justify-content: center;
-    gap: 8px;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 30px;
+    align-items: center;
+    gap: 10px;
     padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-    font-size: 16px;
-    font-weight: 600;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    font-size: 16px;
 }
-
 .settings-button img {
     width: 20px;
     height: 20px;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
 }
-
 .settings-button:hover {
     background-color: #45a049;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
 }
-
-
-.settings-button span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.5px;
+.recipe-menu {
+    position: relative;
+}
+.recipe-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.recipe-button img {
+    width: 16px;
+    height: 16px;
+}
+.recipe-button:hover {
+    background-color: #0056b3;
+}
+.recipe-options {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    display: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.recipe-menu:hover .recipe-options {
+    display: block;
+}
+.recipe-options button {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+.recipe-options button:hover {
+    background-color: #f0f0f0;
 }
