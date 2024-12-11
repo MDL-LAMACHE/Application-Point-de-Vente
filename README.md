@@ -42,9 +42,13 @@ Ce projet est actuellement en développement.
 ## Roadmap
 
 - [ ] Interface utilisateur de base
-- [ ] Interface utilisateur finale
+- [ ] Mise en place de la base de données
+- [ ] Connexion à la base de données
+- [ ] Interfaces de gestion des ventes
+- [ ] Interfaces de gestion de l'inventaire
 - [ ] Interfaces d'ajouts des produits
 - [ ] Interfaces de recette (journée/semaine/mois)
+- [ ] Mise en place de l'api de sumup
 - [ ] Mise en place d'une api
 - [ ] Déploiement en production
 
