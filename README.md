@@ -41,17 +41,72 @@ Ce projet est actuellement en développement.
 [![Contributeurs](https://contrib.rocks/image?repo=MDL-LAMACHE/Application-Point-de-Vente)](https://github.com/MDL-LAMACHE/Application-Point-de-Vente/graphs/contributors)
 ## Roadmap
 
-- [ ] Interface utilisateur de base
-- [ ] Mise en place de la base de données
-- [ ] Connexion à la base de données
-- [ ] Interfaces de gestion des ventes
-- [ ] Interfaces de gestion de l'inventaire
-- [ ] Interfaces d'ajouts des produits
-- [ ] Interfaces de recette (journée/semaine/mois)
-- [ ] Mise en place de l'api de sumup
-- [ ] Mise en place d'une api
-- [ ] Déploiement en production
+## Objectif du Projet
+- [ ] Créer une application web responsive permettant aux vendeurs de gérer les ventes en magasin.
+- [ ] Permettre de sélectionner des produits, les ajouter à une commande, et enregistrer les ventes tout en affichant le total.
+- [ ] Optimiser l'application pour une utilisation sur tablette et permettre son installation en tant qu'APK.
+- [ ] Vérifier les paiements par carte via l'API SumUp avant d'enregistrer la vente dans la base de données.
 
+## Technologies
+- [ ] **Frontend** : HTML, CSS, JavaScript (avec Bootstrap.
+- [ ] **Backend** : PHP.
+- [ ] **Base de données** : MySQL.
+- [ ] **Packaging** : Utilisation de Cordova ou PhoneGap pour convertir l'application en APK.
+- [ ] **Paiement** : Intégration de l'API SumUp pour la gestion des paiements par carte.
+
+## Fonctionnalités Principales
+- [ ] **Interface de l'Application** :
+   - [ ] Zone des produits :
+      - [ ] Affichage des produits sous forme de boutons ou cartes cliquables.
+      - [ ] Organisation des produits par catégories.
+      - [ ] Désactivation des boutons des produits en rupture de stock.
+   - [ ] Liste des produits sélectionnés :
+      - [ ] Afficher les produits ajoutés à la commande avec quantité et prix.
+      - [ ] Calculer et afficher le total en temps réel.
+      - [ ] Permettre la modification des quantités et la suppression de produits.
+- [ ] **Gestion du Stock** :
+   - [ ] Ajouter ou modifier les quantités disponibles dans un onglet "Stock".
+   - [ ] Mettre à jour automatiquement le stock après chaque vente.
+   - [ ] Désactiver les produits avec un stock nul dans l'interface des produits.
+- [ ] **Vente et Paiement** :
+   - [ ] Enregistrer les ventes dans un onglet "Vente".
+   - [ ] Envoyer une requête à l'API SumUp pour vérifier si le paiement par carte est bien passé.
+   - [ ] Si le paiement est validé ("paid"), enregistrer la vente dans la base de données.
+   - [ ] Détails enregistrés : produit, quantité, prix, total, date, et état du paiement.
+- [ ] **Historique des Ventes** :
+   - [ ] Afficher l'historique des ventes dans un onglet dédié.
+   - [ ] Permettre de trier les ventes par jour, semaine, ou mois.
+- [ ] **Conversion en APK** :
+   - [ ] Garantir une compatibilité responsive pour tablettes et smartphones.
+   - [ ] Utiliser Cordova ou PhoneGap pour convertir l'application en APK.
+   - [ ] Optimiser l'interface pour une navigation tactile.
+
+## Exigences Techniques
+- [ ] **Frontend** :
+   - [ ] CSS avec framework responsive (Bootstrap/Vue.js).
+   - [ ] JavaScript pour gérer les commandes et le calcul du total en temps réel.
+- [ ] **Backend** :
+   - [ ] PHP pour gérer la logique côté serveur.
+   - [ ] Connexion à l'API SumUp pour les paiements par carte.
+   - [ ] Connexion à une base de données MySQL.
+- [ ] **Base de données** :
+   - [ ] Table Produits : ID, nom, catégorie, prix, stock.
+   - [ ] Table Ventes : ID, produit_id, quantité, prix, total, date, état du paiement.
+   - [ ] Table Catégories : ID, nom.
+- [ ] **Sécurité** :
+   - [ ] Protéger les données des attaques par injection SQL.
+   - [ ] Sécuriser la communication avec l'API SumUp.
+
+## Design et Expérience Utilisateur
+- [ ] Interface intuitive avec navigation tactile optimisée pour tablette.
+- [ ] Boutons grands et lisibles pour une interaction rapide.
+- [ ] Affichage clair des informations essentielles : prix, total, état du paiement.
+
+## Délai et Livrables
+- [ ] **Livrables** :
+   - Code source complet (HTML, CSS, JavaScript, PHP).
+   - Base de données MySQL pré-configurée.
+   - APK pour Android.
 ## License
 
 Ce projet est sous licence [MIT](https://opensource.org/licenses/MIT).
