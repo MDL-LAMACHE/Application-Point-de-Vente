@@ -192,6 +192,24 @@ body {
     opacity: 0.8;
 }
 .button-column {
+    .button-column {
+        display: compact;
+        flex-direction: column;
+        gap: 10px;
+        text-align: right; /* Aligner les boutons à droite */
+    }
+
+    .right-panel {
+        width: 30%; /* Largeur ajustée pour s'adapter à la disposition */
+        background-color: var(--panel-bg);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start; /* Alignement vertica
+        l sur le haut */
+        border-left: 1px solid var(--border-color); /* Séparation de panneau */
+    }
     display: flex;
     flex-direction: column;
     gap: 10px;
