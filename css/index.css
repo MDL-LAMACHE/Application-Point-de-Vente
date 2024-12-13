@@ -191,7 +191,12 @@ body {
 .bottom-button:hover {
     opacity: 0.8;
 }
-
+.button-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
 #overlay {
     display: none;
     position: fixed;
