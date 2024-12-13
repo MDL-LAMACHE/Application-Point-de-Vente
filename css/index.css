@@ -195,21 +195,21 @@ body {
     .button-column {
         display: compact;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
         text-align: right;
     }
 
     .right-panel {
-        width: 15%;
+        width: 30%;
         background-color: var(--panel-bg);
         padding: 20px;
-        display: flex;
+        display: compact;
         flex-direction: column;
 
         justify-content: flex-start;
         border-left: 1px solid var(--border-color);
     }
-    display: flex;
+    display: contents;
     flex-direction: column;
     gap: 10px;
     text-align: left;
