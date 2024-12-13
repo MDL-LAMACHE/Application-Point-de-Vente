@@ -196,19 +196,18 @@ body {
         display: compact;
         flex-direction: column;
         gap: 10px;
-        text-align: right; /* Aligner les boutons à droite */
+        text-align: right;
     }
 
     .right-panel {
-        width: 30%; /* Largeur ajustée pour s'adapter à la disposition */
+        width: 15%;
         background-color: var(--panel-bg);
         padding: 20px;
         display: flex;
         flex-direction: column;
 
-        justify-content: flex-start; /* Alignement vertica
-        l sur le haut */
-        border-left: 1px solid var(--border-color); /* Séparation de panneau */
+        justify-content: flex-start;
+        border-left: 1px solid var(--border-color);
     }
     display: flex;
     flex-direction: column;
