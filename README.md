@@ -40,7 +40,7 @@ Ce projet est actuellement en développement.
 
 [![Contributeurs](https://contrib.rocks/image?repo=MDL-LAMACHE/Application-Point-de-Vente)](https://github.com/MDL-LAMACHE/Application-Point-de-Vente/graphs/contributors)
 ## Roadmap
-Voir : https://github.com/MDL-LAMACHE/Application-Point-de-Vente/Roadmap.md
+Voir : [Roadmap.md](https://github.com/MDL-LAMACHE/Application-Point-de-Vente/blob/main/Roadmap.md)
 ## License
 
 Ce projet est sous licence [MIT](https://opensource.org/licenses/MIT).
