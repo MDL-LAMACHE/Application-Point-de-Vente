@@ -46,7 +46,7 @@ function confirmOrder() {
 }
 
 function showMenu() {
-    alert("Menu non configuré !");
+    alert("ZIZI");
 }
 
 function openModal() {
