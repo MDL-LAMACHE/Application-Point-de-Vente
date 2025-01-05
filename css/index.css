@@ -1,70 +1,59 @@
-:root {
-    --main-bg: #f6f8fa;
-    --panel-bg: #ffffff;
-    --accent: #007bff;
-    --accent-hover: #0056b3;
-    --danger: #dc3545;
-    --success: #28a745;
-    --text-primary: #333333;
-    --text-secondary: #555555;
-    --border-color: #ddd;
-    --shadow: rgba(0, 0, 0, 0.1);
-}
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--main-bg);
+    background-color: #f6f8fa;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
+
 .container {
     display: flex;
     flex: 1;
     margin: 20px;
-    box-shadow: 0 4px 8px var(--shadow);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .left-panel {
-    width: 30%;
-    background-color: var(--panel-bg);
+    width: 20%;
+    background-color: #ffffff;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid var(--border-color)
+    border-right: 1px solid #ddd;
 }
 
 .left-panel h2 {
     margin: 0 0 10px;
-    color: var(--text-primary);
+    color: #333333;
 }
 
 .article-list {
     flex: 1;
     overflow-y: auto;
     margin-top: 10px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    background-color: var(--main-bg);
+    background-color: #f6f8fa;
 }
+
 .article-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
-    background-color: var(--panel-bg);
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px var(--shadow);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .article-item button {
-    background-color: var(--danger);
+    background-color: #dc3545;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -73,8 +62,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-
-
 .article-item button:hover {
     background-color: #a71d2a;
 }
@@ -82,29 +69,18 @@ body {
 .total {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--text-primary);
+    color: #333333;
     text-align: right;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.middle-panel {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 15px;
-    background: var(--panel-bg);
-     padding: 6px 14px;
-}
-
 .right-panel {
-    width: 40%;
-    background-color: var(--panel-bg);
+    width: 75%;
+    background-color: #ffffff;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: normal;
 }
 
 .buttons {
@@ -116,25 +92,25 @@ body {
 .button {
     padding: 15px;
     font-size: 1rem;
-    background-color: var(--accent);
+    background-color: #007bff;
     color: #ffffff;
     border: none;
     border-radius: 8px;
     text-align: center;
     transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px var(--shadow);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: var(--accent-hover);
+    background-color: #0056b3;
 }
 
 .add-button {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: var(--success);
+    background-color: #28a745;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -144,7 +120,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px var(--shadow);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -160,8 +136,8 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    border-top: 1px solid var(--border-color);
-    background-color: var(--panel-bg);
+    border-top: 1px solid #ddd;
+    background-color: #ffffff;
 }
 
 .bottom-button {
@@ -179,41 +155,19 @@ body {
 }
 
 .bottom-button.success {
-    background-color: var(--success);
+    background-color: #28a745;
     color: #ffffff;
 }
 
 .bottom-button.danger {
-    background-color: var(--danger);
+    background-color: #dc3545;
     color: #ffffff;
 }
 
 .bottom-button:hover {
     opacity: 0.8;
 }
-.button-column {
-    .button-column {
-        display: compact;
-        flex-direction: column;
-        gap: 5px;
-        text-align: right;
-    }
 
-    .right-panel {
-        width: 30%;
-        background-color: var(--panel-bg);
-        padding: 20px;
-        display: compact;
-        flex-direction: column;
-
-        justify-content: flex-start;
-        border-left: 1px solid var(--border-color);
-    }
-    display: contents;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-}
 #overlay {
     display: none;
     position: fixed;
@@ -232,9 +186,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    background-color: var(--panel-bg);
+    background-color: #ffffff;
     padding: 20px;
-    box-shadow: 0 4px 8px var(--shadow);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     z-index: 20;
 }
@@ -243,14 +197,14 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 #modal button {
     width: 100%;
     padding: 10px;
-    background-color: var(--success);
+    background-color: #28a745;
     color: #ffffff;
     border: none;
     border-radius: 5px;

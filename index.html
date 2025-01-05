@@ -16,42 +16,11 @@
     <button onclick="saveArticle()">Enregistrer</button>
     <button onclick="closeModal()" style="background-color: var(--danger);">Retour</button>
 </div>
-<div class="right-panel">
-    <div class="right-panel">
-        <div class="button-column">
-            <button onclick="showCategory('Boisson')">Boisson</button>
-            <button onclick="showCategory('Nourriture')">Nourriture</button>
-            <button onclick="showCategory('Menu')">Menu</button>
-        </div>
-        <div class="category-content" id="category-content">
-        </div>
-    </div>
-    <script>
-        <!-- Ne Pas garder car mis à jour dynamiquement -->
-        function showCategory(category) {
-            const categoryContent = document.getElementById('category-content');
-            let content = '';
-            switch (category) {
-                case 'Boisson':
-                    content = '<ul><li>coca cola - 0,80€</li><li>chocolat chaud - 0,80€</li></ul>';
-                    break;
-                case 'Nourriture':
-                    content = '<ul><li>twix - 0,80€</li><li>pain au nutela - 0,40€</li></ul>';
-                    break;
-                case 'Menu':
-                    content = '<ul><li>Menu 1 - 1,5€</li><li>Menu 2 - 1,5€</li></ul>';
-                    break;
 
-            }
-            categoryContent.innerHTML = content;
-        }
-    </script>
-</div>
 <div class="container">
     <span class="left-panel">
         <h2>Articles Sélectionnés</h2>
         <div class="article-list" id="article-list"></div>
-        <!-- Ne Pas garder car mis à jour dynamiquement -->
         <div class="total" id="total">Total : 0€</div>
     </span>
 
