@@ -160,14 +160,17 @@ body {
     text-decoration: none;
     color: #000000;
 }
+
 .bottom-button.success {
     background-color: #28a745;
     font-size: 30px;
 }
+
 .bottom-button.danger {
     background-color: #dc3545;
     font-size: 30px;
 }
+
 .bottom-button:hover {
     opacity: 0.8;
 }
