@@ -41,14 +41,6 @@ function clearOrder() {
     document.getElementById("article-list").innerHTML = "";
 }
 
-function confirmOrder() {
-    alert("Commande confirmée !");
-}
-
-function showMenu() {
-    alert("ZIZI");
-}
-
 function openModal() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("modal").style.display = "block";

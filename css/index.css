@@ -146,17 +146,17 @@ body {
 
 .bottom-button.menu {
     background-color: #ffc107;
-    color: #ffffff;
+
 }
 
 .bottom-button.success {
     background-color: #28a745;
-    color: #ffffff;
+
 }
 
 .bottom-button.danger {
     background-color: #dc3545;
-    color: #ffffff;
+
 }
 
 .bottom-button:hover {
