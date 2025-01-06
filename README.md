@@ -37,7 +37,10 @@ Cette application est un système de point de vente (POS) en cours de développe
 ## Contributeurs
 
 Ce projet est actuellement en développement.
-[![Contributeurs](https://contrib.rocks/image?repo=MDL-LAMACHE/Application-Point-de-Vente)](https://github.com/MDL-LAMACHE/Application-Point-de-Vente/graphs/contributors)
+<a href="https://github.com/MDL-LAMACHE/Application-Point-de-Vente/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MDL-LAMACHE/Application-Point-de-Vente" />
+</a>
+
 
 ## Roadmap
 Voir : [Roadmap.md](https://github.com/MDL-LAMACHE/Application-Point-de-Vente/blob/main/Roadmap.md)
