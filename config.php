@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:host=127.0.0.1;dbname=gestion_ventes';
+$dsn = 'mysql:host=pixelserver.fr;dbname=gestion_ventes';
 $user = 'root';
 $pass = '';
 
