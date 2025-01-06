@@ -176,7 +176,25 @@ body {
 }
 
 .middle-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 15px;
+    height: 100%;
+}
+
+.responsive-button {
+    flex: 1;
+    width: 100%;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.responsive-button:hover {
+    background-color: #0056b3;
 }
