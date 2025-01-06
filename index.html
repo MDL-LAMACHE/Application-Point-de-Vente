@@ -4,13 +4,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Point de ventes</title>
+    <title>c'est très bancal</title>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="manifest" href="/Webmanifest/manifest.json" />
 </head>
 <body>
+<div id="overlay"></div>
+<div id="modal">
+    <h3>Ajouter un article</h3>
+    <input type="text" id="article-name" placeholder="Nom de l'article">
+    <input type="number" id="article-price" placeholder="Prix de l'article">
+    <button onclick="saveArticle()">Enregistrer</button>
+    <button onclick="closeModal()" style="background-color: var(--danger);">Retour</button>
+</div>
+<div class="right-panel">
+    <div class="right-panel">
+        <div class="button-column">
+            <button onclick="showCategory('Boisson')">Boisson</button>
+            <button onclick="showCategory('Nourriture')">Nourriture</button>
+            <button onclick="showCategory('Menu')">Menu</button>
+        </div>
+        <div class="category-content" id="category-content">
+        </div>
+    </div>
+    <script>
+        function showCategory(category) {
+            const categoryContent = document.getElementById('category-content');
+            let content = '';
+            switch (category) {
+                case 'Boisson':
+                    content = '<ul><li>coca cola - 0,80€</li><li>chocolat chaud - 0,80€</li></ul>';
+                    break;
+                case 'Nourriture':
+                    content = '<ul><li>twix - 0,80€</li><li>pain au nutela - 0,40€</li></ul>';
+                    break;
+                case 'Menu':
+                    content = '<ul><li>Menu 1 - 1,5€</li><li>Menu 2 - 1,5€</li></ul>';
+                    break;
 
-
+            }
+            categoryContent.innerHTML = content;
+        }
+    </script>
+</div>
 <div class="container">
     <span class="left-panel">
         <h2>Articles Sélectionnés</h2>
@@ -24,8 +59,8 @@
 </div>
 
 <div class="bottom-buttons">
-    <a class="bottom-button menu" href="html/menu.html" >Menu</a>
-    <button class="bottom-button success" >Entrer</button>
+    <a class="bottom-button menu" href="menu.html" onclick="showMenu()">Menu</a>
+    <button class="bottom-button success" onclick="confirmOrder()">Entrer</button>
     <button class="bottom-button danger" onclick="clearOrder()" >Supprimer</button>
 
     <script src="/js/index.js"></script>

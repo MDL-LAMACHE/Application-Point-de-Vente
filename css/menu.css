@@ -8,7 +8,7 @@ body {
     background-color: #f0f0f0;
 }
 
-.settings-menu {
+.container {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -59,11 +59,12 @@ body {
     position: absolute;
     top: 45px;
     left: 0;
+    display: none;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+    overflow: hidden;
 }
 .recipe-menu:hover .recipe-options {
     display: block;
