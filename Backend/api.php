@@ -5,7 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $query = $pdo->query("SELECT * FROM produits");
     echo json_encode($query->fetchAll(PDO::FETCH_ASSOC));
 }
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = json_decode(file_get_contents("php://input"));
     $stmt = $pdo->prepare("INSERT INTO ventes (produit_id, quantite, prix_total, date) VALUES (?, ?, ?, ?)");
