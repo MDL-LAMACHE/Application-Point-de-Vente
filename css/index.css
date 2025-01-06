@@ -65,12 +65,11 @@ body {
 }
 
 .total {
-    font-size: 2rem;
+    font-size: 50px;
     font-weight: bold;
     color: #333333;
     text-align: right;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .right-panel {
@@ -89,7 +88,7 @@ body {
 
 .button {
     padding: 15px;
-    font-size: 1rem;
+    font-size: 25px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
@@ -97,7 +96,7 @@ body {
     text-align: center;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+
 }
 
 .button:hover {
@@ -146,19 +145,16 @@ body {
 
 .bottom-button.menu {
     background-color: #ffc107;
-
+    font-size: 25px;
 }
-
 .bottom-button.success {
     background-color: #28a745;
-
+    font-size: 25px;
 }
-
 .bottom-button.danger {
     background-color: #dc3545;
-
+    font-size: 25px;
 }
-
 .bottom-button:hover {
     opacity: 0.8;
 }
