@@ -17,6 +17,7 @@ body {
     overflow: hidden;
 }
 
+/* Liste des articles sélectionnés */
 .article-list {
     flex: 1;
     overflow-y: auto;
@@ -28,6 +29,7 @@ body {
     font-size: 25px;
 }
 
+/* Chaque article dans la liste */
 .article-item {
     display: flex;
     justify-content: space-between;
@@ -39,6 +41,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Boutons dans chaque article */
 .article-item button {
     background-color: #fff;
     color: #fff;
@@ -54,6 +57,7 @@ body {
     color: white;
 }
 
+/* Texte total de la commande */
 .total {
     font-size: 50px;
     font-weight: bold;
@@ -62,6 +66,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Panneau de droite (articles à sélectionner) */
 .right-panel {
     width: 65%;
     background-color: #ffffff;
@@ -70,6 +75,7 @@ body {
     flex-direction: column;
 }
 
+/* Panneau du milieu (catégories d'articles) */
 .middle-panel {
     width: 15%;
     background-color: #ffffff;
@@ -81,6 +87,7 @@ body {
     text-align: center;
 }
 
+/* Panneau de gauche (articles sélectionnés) */
 .left-panel {
     width: 20%;
     background-color: #ffffff;
@@ -91,12 +98,14 @@ body {
     font-size: 24px;
 }
 
+/* Conteneur des boutons d'articles */
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
 
+/* Boutons pour les articles */
 .button {
     padding: 15px;
     font-size: 25px;
@@ -107,13 +116,13 @@ body {
     text-align: center;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 .button:hover {
     background-color: #0056b3;
 }
 
+/* Bouton flottant pour ajouter un article (non utilisé ici) */
 .add-button {
     position: absolute;
     top: 20px;
@@ -133,7 +142,7 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-
+/* Boutons du bas */
 .bottom-buttons {
     display: flex;
     position: absolute;
@@ -144,6 +153,7 @@ body {
     background-color: #ffffff;
 }
 
+/* Boutons spécifiques du bas (par type) */
 .bottom-button {
     flex: 1;
     padding: 20px;
@@ -175,13 +185,18 @@ body {
     opacity: 0.8;
 }
 
+/* Conteneur pour les boutons du milieu */
 .middle-buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
     height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
 }
 
+/* Boutons réactifs pour les catégories */
 .responsive-button {
     flex: none;
     width: 80%;
