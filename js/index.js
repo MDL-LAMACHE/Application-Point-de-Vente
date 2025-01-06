@@ -23,7 +23,7 @@ function addToCart(name, price) {
     // Réactive le bouton après une courte période
     setTimeout(() => {
         button.disabled = false;
-    }, 300); // Délai de 300ms
+    }, 100); // Délai de 300ms
 }
 
 function removeArticle(button, price) {
