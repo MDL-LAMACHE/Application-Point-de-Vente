@@ -17,17 +17,6 @@ body {
     overflow: hidden;
 }
 
-.left-panel {
-    width: 20%;
-    background-color: #ffffff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid #ddd;
-    font-size: 24px;
-}
-
-
 .article-list {
     flex: 1;
     overflow-y: auto;
@@ -83,6 +72,17 @@ body {
 
 .middle-panel {
     width: 15%;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+    font-size: 24px;
+    text-align: center;
+}
+
+.left-panel {
+    width: 20%;
     background-color: #ffffff;
     padding: 20px;
     display: flex;
@@ -170,4 +170,10 @@ body {
 }
 .bottom-button:hover {
     opacity: 0.8;
+}
+
+.middle-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
