@@ -46,21 +46,5 @@ function openModal() {
     document.getElementById("modal").style.display = "block";
 }
 
-function closeModal() {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("modal").style.display = "none";
-}
-
-function saveArticle() {
-    const name = document.getElementById("article-name").value;
-    const price = parseFloat(document.getElementById("article-price").value);
-    if (name && price > 0) {
-        articles.push({ name, price });
-        updateButtons();
-        closeModal();
-    } else {
-        alert("Veuillez remplir correctement les informations.");
-    }
-}
 
 init();
