@@ -80,3 +80,7 @@ body {
 .recipe-options button:hover {
     background-color: #f0f0f0;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
