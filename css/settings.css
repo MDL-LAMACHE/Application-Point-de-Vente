@@ -1,87 +1,72 @@
-@import "https://unpkg.com/open-props/easings.min.css";
-
-:root {
-    --icon-fill: #000; /* Define your desired value */
-    --icon-fill-hover: #555; /* Define your desired value */
-    --ease-elastic-3: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Define your desired value */
-    --ease-3: ease-in-out; /* Define your desired value */
-    --ease-elastic-4: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Define your desired value */
-    --ease-out-5: ease-out; /* Define your desired value */
+.btToggle .btn {
+    position: absolute; /* Changer en absolute pour le positionnement */
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster pour que le point de référence soit le centre */
 }
 
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
-    transform-origin: center;
-}
 
-.sun-and-moon > :is(.moon, .sun) {
-    fill: var(--icon-fill);
-}
-
-.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
-    fill: var(--icon-fill-hover);
-}
-
-.sun-and-moon > .sun-beams {
-    stroke: var(--icon-fill);
-    stroke-width: 2px;
-}
-
-.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
-    stroke: var(--icon-fill-hover);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun {
-    transform: scale(1.75);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun-beams {
+/* Hide default HTML checkbox */
+.btToggle input {
     opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-[data-theme="dark"] .sun-and-moon > .moon > circle {
-    transform: translateX(-7px);
+/* The slider */
+.btToggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background-color: #000;
+    border-radius: 34px;
+    white-space : nowrap;
 }
 
-@supports (cx: 1) {
-    [data-theme="dark"] .sun-and-moon > .moon > circle {
-        cx: 17;
-        transform: translateX(0);
-    }
+.btToggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .sun-and-moon > .sun {
-        transition: transform .5s var(--ease-elastic-3);
-    }
-
-    .sun-and-moon > .sun-beams {
-        transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
-    }
-
-    .sun-and-moon .moon > circle {
-        transition: transform .25s var(--ease-out-5);
-    }
-
-    @supports (cx: 1) {
-        .sun-and-moon .moon > circle {
-            transition: cx .25s var(--ease-out-5);
-        }
-    }
-
-    [data-theme="dark"] .sun-and-moon > .sun {
-        transition-timing-function: var(--ease-3);
-        transition-duration: .25s;
-        transform: scale(1.75);
-    }
-
-    [data-theme="dark"] .sun-and-moon > .sun-beams {
-        transition-duration: .15s;
-        transform: rotateZ(-25deg);
-    }
-
-    [data-theme="dark"] .sun-and-moon > .moon > circle {
-        transition-duration: .5s;
-        transition-delay: .25s;
-    }
+.btToggle input:checked + .slider {
+    background-color: #fff;
 }
-        
+
+.btToggle input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    color:#000;
+}
+
+.btToggle input:checked + .slider:before {
+    right:4px;
+    left:auto;
+    background-color: #000;
+}
+
+/* DARK MODE */
+.mode-dark{
+    background-color: #000;
+    color : #fff
+}
+
+.mode-dark form{
+    border-color: #ccc;
+}
+
+.mode-dark .bloc-lien a:link,.mode-dark .bloc-lien a:visited,.mode-dark .bloc-lien a{
+    color:#fff;
+}
