@@ -51,7 +51,7 @@ body {
 }
 
 .article-item button {
-    background-color: #dc3545;
+    background-color: #fff;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -62,6 +62,7 @@ body {
 
 .article-item button:hover {
     background-color: #a71d2a;
+    color: white;
 }
 
 .total {
