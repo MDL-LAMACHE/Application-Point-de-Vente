@@ -1,14 +1,14 @@
 Ce document présente la roadmap détaillée pour le développement de l'application MDL Shop, une application
 web responsive permettant aux vendeurs de gérer les ventes et le stock directement depuis une tablette.
 L'application sera également convertie en APK pour une utilisation sur Android. L'équipe est composée de
-membres juniors, avec Bastien en charge du frontend, Lux du backend, et Sacha de la relecture du code.
+membres juniors, avec Bastien en charge du frontend, Lux du backend, et Astraboy8 de la relecture du code.
 
 ## Étape 1 : Planification et préparation
 1. **Réunion initiale**
    - Analyse du cahier des charges par l’équipe.
    - Validation des technologies utilisées : Frontend (HTML, CSS, JavaScript, Bootstrap), Backend (PHP, MySQL),
      Packaging (Cordova/PhoneGap pour la conversion en APK).
-   - Répartition des tâches : Bastien (Frontend), Lux (Backend), Sacha (Relecture du code).
+   - Répartition des tâches : Bastien (Frontend), Lux (Backend), Astraboy8 (Relecture du code).
    - **Livrables de cette étape :**
      - Maquettes validées (Bastien).
      - Script SQL initial pour la base de données (Lux).
@@ -55,7 +55,7 @@ membres juniors, avec Bastien en charge du frontend, Lux du backend, et Sacha de
 3. **Livrables de cette étape :**
    - Application fonctionnelle connectée au backend.
 
-## Étape 6 : Relecture par Sacha
+## Étape 6 : Relecture par Astraboy8
 1. **Analyse et correction du code produit par Bastien :**
    - Revue des fichiers HTML, CSS, et JavaScript pour : Respect des bonnes pratiques, Optimisation du code pour la maintenabilité.
 2. **Livrables de cette étape :**
@@ -74,4 +74,4 @@ membres juniors, avec Bastien en charge du frontend, Lux du backend, et Sacha de
 ## Conclusion
 Cette roadmap décrit les étapes détaillées pour le développement de l'application MDL Shop, avec une forte collaboration entre
 les membres de l’équipe. Chaque tâche a été définie clairement et les commits doivent être clairs et détaillés pour une
-meilleure gestion du projet. Sacha relira le code tous les soirs pour garantir la qualité du développement.
+meilleure gestion du projet. Astraboy8 relira le code tous les soirs pour garantir la qualité du développement.
