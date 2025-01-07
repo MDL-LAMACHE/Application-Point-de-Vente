@@ -1,51 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>c'est très bancal</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <title>Point de ventes</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="manifest" href="./Webmanifest/manifest.json" />
 </head>
 <body>
-<div id="overlay"></div>
-<div id="modal">
-    <h3>Ajouter un article</h3>
-    <input type="text" id="article-name" placeholder="Nom de l'article">
-    <input type="number" id="article-price" placeholder="Prix de l'article">
-    <button onclick="saveArticle()">Enregistrer</button>
-    <button onclick="closeModal()" style="background-color: var(--danger);">Retour</button>
-</div>
-<div class="right-panel">
-    <div class="right-panel">
-        <div class="button-column">
-            <button onclick="showCategory('Boisson')">Boisson</button>
-            <button onclick="showCategory('Nourriture')">Nourriture</button>
-            <button onclick="showCategory('Menu')">Menu</button>
-        </div>
-        <div class="category-content" id="category-content">
-        </div>
-    </div>
-
-</div>
 <div class="container">
-    <span class="left-panel">
-        <h2>Articles Sélectionnés</h2>
-        <div class="article-list" id="article-list"></div>
-        <div class="total" id="total">Total : 0€</div>
-    </span>
+        <span class="left-panel">
+            <h2>Articles Sélectionnés</h2>
+            <div class="article-list" id="article-list"></div>
+            <div class="total" id="total">Total : 0€</div>
+        </span>
+
+    <span class="middle-panel">
+            <h2>Articles</h2>
+            <div class="middle-buttons" id="middle-buttons-container">
+                <button class="responsive-button">Boissons</button>
+                <button class="responsive-button">En cas</button>
+                <button class="responsive-button">Cerveau</button>
+                <button class="responsive-button">test1</button>
+                <button class="responsive-button">test2</button>
+            </div>
+        </span>
 
     <span class="right-panel">
-        <div class="buttons" id="buttons-container"></div>
-    </span>
+            <div class="buttons" id="buttons-container">
+                <button class="button" onclick="addToCart('Article 1', 10)">Article 1 (10€)</button>
+                <button class="button" onclick="addToCart('Article 2', 15)">Article 2 (15€)</button>
+                <button class="button" onclick="addToCart('Article 3', 20)">Article 3 (20€)</button>
+            </div>
+        </span>
 </div>
 
 <div class="bottom-buttons">
-    <a class="bottom-button menu" href="html/menu.html" onclick="showMenu()">Menu</a>
-    <button class="bottom-button success" onclick="confirmOrder()">Entrer</button>
-    <button class="bottom-button danger" onclick="clearOrder()" >Supprimer</button>
-
-    <script src="/js/index.js"></script>
+    <a class="bottom-button menu" href="html/menu.html">Menu</a>
+    <button class="bottom-button success">Entrer</button>
+    <button class="bottom-button danger" onclick="clearOrder()">Supprimer</button>
 </div>
+
+<script src="/js/index.js"></script>
 </body>
 </html>
