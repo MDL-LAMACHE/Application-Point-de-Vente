@@ -38,3 +38,4 @@ function clearOrder() {
     document.getElementById("total").textContent = "Total : 0€";
     document.getElementById("article-list").innerHTML = "";
 }
+
