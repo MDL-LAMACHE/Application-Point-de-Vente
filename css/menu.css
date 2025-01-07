@@ -7,7 +7,19 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
 }
-
+.retour {
+    background-color: transparent;
+    border: none;
+    width: 50%;
+}
+.retour img {
+    width: 10%;
+    height: auto;
+}
+.retour:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 .container {
     display: flex;
     flex-direction: column;
