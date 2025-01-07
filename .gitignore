@@ -1,0 +1,8 @@
+# Ignore the .idea directory
+.idea/
+
+# Ignore other common files and directories
+node_modules/
+vendor/
+.DS_Store
+*.log
