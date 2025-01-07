@@ -1,0 +1,5 @@
+CREATE TABLE recipes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    value INT NOT NULL
+);
