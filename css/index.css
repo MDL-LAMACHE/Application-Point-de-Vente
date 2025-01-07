@@ -95,17 +95,17 @@ body {
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .button {
-    padding: 15px;
+    padding: 20px;
     font-size: 25px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
