@@ -1,33 +1,30 @@
-let articles = [{ name: "Article 1", price: 10 }];
+// Initialise la variable 'total' pour suivre la somme des prix des articles ajoutés au panier
 let total = 0;
 
-function init() {
-    updateButtons();
-}
+// Fonction pour ajouter un article au panier
+function addToCart(name, price) {
+    const button = event.target;
+    button.disabled = true;
 
-function updateButtons() {
-    const container = document.getElementById("buttons-container");
-    container.innerHTML = "";
-    articles.forEach((article, index) => {
-        const btn = document.createElement("button");
-        btn.textContent = `${article.name} (${article.price}€)`;
-        btn.className = "button";
-        btn.onclick = () => addToCart(article);
-        container.appendChild(btn);
-    });
-}
-
-function addToCart(article) {
-    total += article.price;
+    total += price; // Ajoute le prix de l'article au total
     document.getElementById("total").textContent = `Total : ${total}€`;
+
+    //Ce code ajoute un article à la liste affichée et réactive le bouton après 100 ms.
     const list = document.getElementById("article-list");
     const item = document.createElement("div");
     item.className = "article-item";
-    item.innerHTML = `${article.name} - ${article.price}€\n
-<button onclick="removeArticle(this, ${article.price})">❌</button>\n            `;
+    item.innerHTML = `
+        ${name} - ${price}€ 
+        <button onclick="removeArticle(this, ${price})">❌</button>
+    `;
     list.appendChild(item);
+
+    setTimeout(() => {
+        button.disabled = false;
+    }, 100);
 }
 
+// Fonction pour retirer un article du panier
 function removeArticle(button, price) {
     const articleItem = button.parentElement;
     articleItem.remove();
@@ -35,16 +32,9 @@ function removeArticle(button, price) {
     document.getElementById("total").textContent = `Total : ${total}€`;
 }
 
+// Fonction pour vider complètement le panier
 function clearOrder() {
     total = 0;
     document.getElementById("total").textContent = "Total : 0€";
     document.getElementById("article-list").innerHTML = "";
 }
-
-function openModal() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("modal").style.display = "block";
-}
-
-
-init();

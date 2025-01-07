@@ -1,0 +1,72 @@
+.btToggle .btn {
+    position: absolute; /* Changer en absolute pour le positionnement */
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster pour que le point de référence soit le centre */
+}
+
+
+/* Hide default HTML checkbox */
+.btToggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.btToggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background-color: #000;
+    border-radius: 34px;
+    white-space : nowrap;
+}
+
+.btToggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btToggle input:checked + .slider {
+    background-color: #fff;
+}
+
+.btToggle input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    color:#000;
+}
+
+.btToggle input:checked + .slider:before {
+    right:4px;
+    left:auto;
+    background-color: #000;
+}
+
+/* DARK MODE */
+.mode-dark{
+    background-color: #000;
+    color : #fff
+}
+
+.mode-dark form{
+    border-color: #ccc;
+}
+
+.mode-dark .bloc-lien a:link,.mode-dark .bloc-lien a:visited,.mode-dark .bloc-lien a{
+    color:#fff;
+}
