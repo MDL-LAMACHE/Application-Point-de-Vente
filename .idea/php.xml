@@ -14,9 +14,6 @@
     <include_path>
       <path value="$USER_HOME$/Documents/php-8.4.1" />
       <path value="/usr/bin" />
-      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/pdodb/pdodb" />
     </include_path>
   </component>
   <component name="PhpStanOptionsConfiguration">
