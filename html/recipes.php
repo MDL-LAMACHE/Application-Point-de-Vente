@@ -10,6 +10,12 @@
 </head>
 <body>
 <a href="menu.php"><i class="fa fa-arrow-left" style="color: black"></i></a>
+<div class="filter-buttons">
+    <button onclick="filterData('day')">Jour</button>
+    <button onclick="filterData('week')">Semaine</button>
+    <button onclick="filterData('month')">Mois</button>
+    <button onclick="filterData('year')">Année</button>
+</div>
 <div class="recettes">
     <canvas id="recipeChart"></canvas>
     </div>
@@ -27,18 +33,49 @@ try {
 ?>
 
 <script>
-    const data = <?php echo json_encode($data); ?>;
+    const rawData = <?php echo json_encode($data); ?>;
+
+    function filterData(period) {
+        let filteredData;
+        const now = new Date();
+
+        switch (period) {
+            case 'day':
+                filteredData = rawData.filter(item => new Date(item.date) >= new Date(now.setDate(now.getDate() - 1)));
+                break;
+            case 'week':
+                filteredData = rawData.filter(item => new Date(item.date) >= new Date(now.setDate(now.getDate() - 7)));
+                break;
+            case 'month':
+                filteredData = rawData.filter(item => new Date(item.date) >= new Date(now.setMonth(now.getMonth() - 1)));
+                break;
+            case 'year':
+                filteredData = rawData.filter(item => new Date(item.date) >= new Date(now.setFullYear(now.getFullYear() - 1)));
+                break;
+            default:
+                filteredData = rawData;
+        }
+
+        updateChart(filteredData);
+    }
+
+    function updateChart(data) {
     const labels = data.map(item => item.date);
     const values = data.map(item => item.value);
+
+        recipeChart.data.labels = labels;
+        recipeChart.data.datasets[0].data = values;
+        recipeChart.update();
+    }
 
     const ctx = document.getElementById('recipeChart').getContext('2d');
     const recipeChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: labels,
+            labels: rawData.map(item => item.date),
             datasets: [{
                 label: 'Recettes',
-                data: values,
+                data: rawData.map(item => item.value),
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }]

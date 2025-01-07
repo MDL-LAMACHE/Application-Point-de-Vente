@@ -1,5 +1,38 @@
-.recipe-options {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+
+.filter-buttons {
     display: flex;
-    justify-content: center;
-    gap: 4px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: #ddd;
+}
+
+.recettes {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
