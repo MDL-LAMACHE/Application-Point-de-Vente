@@ -16,7 +16,7 @@ body {
     display: block;
     float: right;
 }
-}
+
 .retour img {
     width: 10%;
     height: auto;
@@ -101,4 +101,11 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
 }
