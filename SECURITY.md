@@ -2,20 +2,21 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Php version currently supported.
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
+|---------|--------------------|
+| 5.6.x   | :white_check_mark: |
 | 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
+| 4.0.x   | :x:                |
 | < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a vulnerability, please report it by emailing **mdl@lamache.org**. Your report should include the following details:
+- **Description**: A clear and concise explanation of the vulnerability.
+- **Reproduction Steps**: Detailed steps to reproduce the issue.
+- **Name and Surname**: Your full name.
+- **Timestamp**: The date and time when the vulnerability was discovered.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Thank you for helping us maintain the security and integrity of our platform!
