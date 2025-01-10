@@ -4,8 +4,8 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
+    background: linear-gradient(to right, red, yellow);
 }
-
 a {
     text-decoration: none;
     color: #333;

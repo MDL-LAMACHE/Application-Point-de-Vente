@@ -27,7 +27,9 @@ body {
     background-color: #f6f8fa;
     font-size: 25px;
 }
-
+body {
+    background: linear-gradient(to right, red, yellow);
+}
 .article-item {
     display: flex;
     justify-content: space-between;

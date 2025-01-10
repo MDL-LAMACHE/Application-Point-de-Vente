@@ -1,10 +1,13 @@
 body {
+    padding: 0;
     margin: 0;
+    position: relative;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     background-color: #f0f0f0;
 }
 .retour {
@@ -15,10 +18,14 @@ body {
     width: 40px;
     display: block;
     float: right;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
+body {
+    background: linear-gradient(to right, red, yellow); /* Dégradé horizontal */
+}
 .retour img {
-    width: 10%;
     height: auto;
 }
 .retour:hover {
@@ -101,11 +108,4 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
 }
